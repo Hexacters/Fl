@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Fl-app';
+  ddata: any;
+  Cdata: any;
+
+  constructor() { }
+
+  ngOnInit() {
+    this.ddata = [{
+      name: 'Venkat',
+      DOB: '09-04-1998'
+    }];
+    this.Cdata = [
+      'name',
+      'DOB'
+    ];
+  }
 }
